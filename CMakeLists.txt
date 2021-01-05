@@ -3,15 +3,17 @@ enable_testing()
 
 project(bowling)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(FLAGS -Wall -Wextra -Werror -Wconversion -pedantic -g)
 set(SANITS -fsanitize=address -fsanitize=undefined)
 set(SRC
-    File.cpp)
+    File.cpp
+    Game.cpp)
 set(TEST_SRC
-    File-ut.cpp)
+    File-ut.cpp
+    Game-ut.cpp)
 
 #####################################################################
 # Download and unpack googletest at configure time
